@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%">
+
+  <!-- Document body with clipped top-right corner -->
+  <path fill="#1565C0" d="M10,8 L66,8 L90,32 L90,92 Q90,95 87,95 L13,95 Q10,95 10,92 Z"/>
+
+  <!-- Dog-ear fold shadow -->
+  <path fill="#0D3B8E" d="M66,8 L90,32 L66,32 Z"/>
+
+  <!-- Subtle header tint -->
+  <rect x="10" y="8" width="56" height="18" fill="rgba(255,255,255,0.10)"/>
+
+  <!-- Document content lines -->
+  <rect x="20" y="38" width="50" height="5" rx="2.5" fill="white" opacity="0.85"/>
+  <rect x="20" y="48" width="38" height="5" rx="2.5" fill="white" opacity="0.5"/>
+  <rect x="20" y="58" width="44" height="5" rx="2.5" fill="white" opacity="0.5"/>
+  <rect x="20" y="68" width="30" height="5" rx="2.5" fill="white" opacity="0.5"/>
+
+  <!-- Red alert badge -->
+  <circle cx="76" cy="76" r="20" fill="#E53935"/>
+
+  <!-- Exclamation mark in badge -->
+  <rect x="72.5" y="63" width="7" height="14" rx="3.5" fill="white"/>
+  <circle cx="76" cy="84" r="4.5" fill="white"/>
+
+</svg>

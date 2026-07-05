@@ -1,0 +1,41 @@
+@host = http://localhost:3978
+
+### Health check
+GET {{host}}/
+
+###
+
+### Get all tickets (empty at start)
+GET {{host}}/api/tickets
+Accept: application/json
+
+###
+
+### Create a ticket manually (bypasses the bot conversation)
+POST {{host}}/api/tickets
+Content-Type: application/json
+
+{
+  "title": "Cannot access SharePoint",
+  "priority": "High",
+  "affectedSystem": "SharePoint",
+  "reportedBy": "Ejaz Hussain"
+}
+
+###
+
+### Get a specific ticket (replace INC-1001 with the ID returned above)
+GET {{host}}/api/tickets/INC-1001
+Accept: application/json
+
+###
+
+### Update ticket status
+PATCH {{host}}/api/tickets/INC-1001/status
+Content-Type: application/json
+
+{
+  "status": "Resolved"
+}
+
+###

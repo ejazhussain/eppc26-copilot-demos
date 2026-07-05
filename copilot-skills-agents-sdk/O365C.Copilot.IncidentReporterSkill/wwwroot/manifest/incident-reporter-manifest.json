@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schemas.botframework.com/schemas/skills/skill-manifest-2.0.0.json",
+  "$id": "IncidentReporterSkill",
+  "name": "IT Incident Reporter",
+  "version": "1.0",
+  "description": "A skill that guides employees through logging an IT support incident using a multi-turn conversation. Collects title, priority, and affected system, then creates and returns a ticket ID.",
+  "publisherName": "Office365 Clinic",
+  "privacyUrl": "https://office365clinic.ngrok.dev/privacy.html",
+  "copyright": "Copyright 2026 Office365 Clinic",
+  "iconUrl": "https://office365clinic.ngrok.dev/icon.png",
+  "tags": [
+    "itsupport",
+    "helpdesk",
+    "incident",
+    "ticketing"
+  ],
+  "endpoints": [
+    {
+      "name": "default",
+      "protocol": "BotFrameworkV3",
+      "description": "Default endpoint",
+      "endpointUrl": "https://office365clinic.ngrok.dev/api/messages",
+      "msAppId": "fc20cf97-0114-4644-a3ac-fa09c04d50b6"
+    }
+  ],
+  "activities": {
+    "reportIncident": {
+      "description": "Starts a guided multi-turn conversation to log an IT support incident and returns a ticket ID",
+      "type": "message"
+    },
+    "checkTicketStatus": {
+      "description": "Returns the current status of an existing ticket.",
+      "type": "message",
+      "value": {
+        "type": "object",
+        "properties": {
+          "activityAction": {
+            "type": "string",
+            "description": "The skill action being invoked",
+            "default": "checkTicketStatus"
+          },
+          "ticketId": {
+            "type": "string",
+            "description": "The ticket ID to look up (e.g. INC-1001)"
+          }
+        }
+      }
+    }
+  }
+}

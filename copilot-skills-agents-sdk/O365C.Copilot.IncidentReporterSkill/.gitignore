@@ -1,0 +1,57 @@
+## .NET / ASP.NET Core
+
+# Build outputs
+bin/
+obj/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+.nuget/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio files
+.vs/
+*.rsuser
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Claude
+.claude/
+
+# Test results
+TestResults/
+*.trx
+
+# Publish output
+publish/
+out/
+
+# Runtime / Crash dumps
+*.dmp
+
+# Secrets / Local config
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Environment files
+.env
+.env.*
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+logs/
